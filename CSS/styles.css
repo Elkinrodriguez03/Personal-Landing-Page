@@ -35,6 +35,10 @@
 
 /* General styles */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -56,7 +60,7 @@ section {
 strong { font-weight: var(--fw-bold);}
 
 :focus {
-    outline: 3px solids var(--clr-accent);
+    outline: 3px solid var(--clr-accent);
     outline-offset: 3px;
 }
 
@@ -64,7 +68,7 @@ strong { font-weight: var(--fw-bold);}
 
 .btn {
     display: inline-block;
-    padding: .5em 2.5em;
+    padding: .5em 1.5em;
     background: var(--clr-accent);
     color: var(--clr-dark);
     text-decoration: none;    
@@ -153,7 +157,7 @@ header {
     z-index: 100;
 
     transform: translateX(100%);
-    transition: transform 250em cubic-bezier(.5, 0, .5, 1);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
 .nav__list {
@@ -187,6 +191,26 @@ header {
     right: 1em;
     top: 1em;
     z-index: 1000; 
+}
+
+.nav-open .nav {
+   transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburguer {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburguer::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburguer::after {
+    opacity: 0;
 }
 
 .hamburguer {
@@ -426,4 +450,19 @@ header {
 
 .social-list__link {
     padding: .5em ;
+}
+
+
+/* Individual Portfolio item styles */
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
