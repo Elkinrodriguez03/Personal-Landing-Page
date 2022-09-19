@@ -54,7 +54,7 @@ img {
 }
 
 section {
-    padding: 5em 2em;
+    padding: 3em 2em;
 }          
 
 strong { font-weight: var(--fw-bold);}
@@ -456,7 +456,7 @@ header {
 /* Individual Portfolio item styles */
 
 .portfolio-item-individual {
-    padding: 0 2em 2em;
+    padding: 0 1em 1em;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -465,4 +465,8 @@ header {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.portfolio-item-individual img {
+    padding: 1em;
 }
